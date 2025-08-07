@@ -1,0 +1,12 @@
+[build]
+  base = "frontend"
+  publish = "frontend/dist"
+  command = "npm install && npm run build"
+
+[build.environment]
+  VITE_BACKEND_URL = "https://doctor-booking-backend-i4gi.onrender.com"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
