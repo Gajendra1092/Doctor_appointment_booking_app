@@ -78,14 +78,4 @@ _A full-stack web application that allows patients to book appointments with doc
 
 ---
 
-## 🔑 Admin Access
 
-**Demo Credentials:**  
-📧 **Email:** `admin@example.com`  
-🔑 **Password:** `admin123$#%`
-
-## 🔑 Doctor Access
-
-**Demo Credentials:**  
-📧 **Email:** `doctor@example.com`  
-🔑 **Password:** `doctor123$#%`
