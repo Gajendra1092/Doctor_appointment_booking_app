@@ -14,7 +14,7 @@ const AdminContextProvider = (props) => {
   const [appointments, setAppointments] = useState([]);
   const [dashData, setDashData] = useState(false);
 
-  const backendUrl = "https://doctor-booking-backend-i4gi.onrender.com";
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://doctor-booking-backend-i4gi.onrender.com";
 
   const getAllDoctors = async () => {
     try {

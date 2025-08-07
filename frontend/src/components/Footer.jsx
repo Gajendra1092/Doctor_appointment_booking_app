@@ -48,20 +48,13 @@ const Footer = () => {
           <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
           <ul className="flex flex-col gap-2 text-gray-600">
             <li className="cursor-pointer hover:text-black transition-all duration-500">
-              +998912019909
+              +916377671317
             </li>
             <li className="cursor-pointer hover:text-black transition-all duration-500">
-              akmalov1c09@gmail.com
+              gajendranh1092@gmail.com
             </li>
           </ul>
         </div>
-      </div>
-      {/*---------- Copyright Text ----------*/}
-      <div>
-        <hr className="text-gray-400" />
-        <p className="py-5 text-sm text-center text-gray-600">
-          Copyright © 2025 Sardor Akmalovich - All Right Reserved.
-        </p>
       </div>
     </div>
   );

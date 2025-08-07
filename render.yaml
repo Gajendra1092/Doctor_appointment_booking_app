@@ -1,0 +1,50 @@
+services:
+  # Backend API Service
+  - type: web
+    name: doctor-booking-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: MONGODB_URL
+        value: mongodb+srv://Gajendra:Gajendra@cluster0.yr2oe3j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: CLOUDINARY_CLOUD_NAME
+        value: dvpset7bw
+      - key: CLOUDINARY_API_KEY
+        value: 316193194152524
+      - key: CLOUDINARY_SECRET_KEY
+        value: nx2vuEXgm5l3mXM5gYTEDpGM7kI
+      - key: JWT_SECRET
+        value: your-super-secret-jwt-key-change-this-in-production
+      - key: ADMIN_EMAIL
+        value: admin@example.com
+      - key: ADMIN_PASSWORD
+        value: admin123$#%
+      - key: PORT
+        value: 4000
+
+  # Frontend Static Site
+  - type: web
+    name: doctor-booking-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_BACKEND_URL
+        fromService:
+          type: web
+          name: doctor-booking-backend
+          property: host
+
+  # Admin Panel Static Site  
+  - type: web
+    name: doctor-booking-admin
+    env: static
+    buildCommand: cd admin && npm install && npm run build
+    staticPublishPath: admin/dist
+    envVars:
+      - key: VITE_BACKEND_URL
+        fromService:
+          type: web
+          name: doctor-booking-backend
+          property: host
