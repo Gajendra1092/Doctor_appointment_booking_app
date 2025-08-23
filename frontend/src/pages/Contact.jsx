@@ -19,10 +19,10 @@ const Contact = () => {
         <div className="flex flex-col justify-center items-start gap-6">
           <p className="font-semibold text-lg text-gray-600">Our OFFICE</p>
           <p className="text-gray-500">
-            Tashkent <br /> Uzbekistan
+            Rajasthan <br /> India
           </p>
           <p className="text-gray-500">
-            Tel: +998912019909 <br /> Email: akmalov1c09@gmail.com
+            Tel: +999999999 <br /> Email: gajendranh1092@gmail.com
           </p>
           <p className="font-semibold text-lg text-gray-600">
             Careers at BDoctor
